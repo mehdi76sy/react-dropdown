@@ -1,0 +1,144 @@
+:root {
+    --primary-bg:#242526;
+    --secondary-bg:#fff;
+    --primary-text-color:black;
+    --secondary-text-color:#a8a8a8;
+    --border-radius:8px;
+    --speed:400ms;
+  }
+
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .menu-trigger img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    border-radius: 10%;
+    cursor:pointer;
+    transition: var(--speed) ease-in-out;
+  }
+  
+  .menu-trigger:hover img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 10%;
+    cursor:pointer;
+    transition: var(--speed) ease-in-out;
+  }
+  
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .wrapper h3 {
+    padding: 0;
+  }
+  
+  .wrapper span {
+    font-size: 14px;
+    color: var(--primary-text-color);
+    font-weight: 400;
+    opacity: 80%;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: #d2cedd;
+    opacity: 80%;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    width: 200px;
+  }
+  
+  .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    height: 40px;
+    background-color: #d2cedd;
+    border-radius: var(--border-radius);
+    width: 20px;
+    transform: rotate(45eg);
+  }
+  
+  .dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: var(--speed) ease-in-out;
+  }
+  
+  .dropdown-menu.inactive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20);
+    transition: var(--speed) ease-in-out;
+  }
+  
+  h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+    font-weight: 500;
+    color: var(--primary-text-color);
+    line-height: 1.2rem;
+  }
+  
+  
+  
+  .dropdown-menu ul li {
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .dropdown-menu ul li:hover a {
+    color: #7d719d;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu ul li:hover img {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .dropdown-item {
+    display: flex;
+    margin: 10px auto;
+  }
+  
+  .dropdown-item img {
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: var(--speed);
+  }
+  
+  .dropdown-item a {
+    max-width: 100px;
+    margin-left: 10px;
+    transition: var(--speed);
+  }
+  
+  
